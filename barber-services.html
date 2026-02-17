@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | BarberHaus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="barber-style.css">
+</head>
+<body>
+
+  <div class="language-toggle">
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="gr">ΕΛ</button>
+  </div>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-main">BarberHaus</span>
+        <span class="logo-sub" data-en="Premium Grooming" data-gr="Ανδρική Περιποίηση">Premium Grooming</span>
+      </div>
+      <button class="menu-toggle"><span></span><span></span><span></span></button>
+      <ul class="nav-menu">
+        <li><a href="index.html" data-en="Home" data-gr="Αρχική">Home</a></li>
+        <li><a href="barber-services.html" class="active" data-en="Services" data-gr="Υπηρεσίες">Services</a></li>
+        <li><a href="barber-gallery.html" data-en="Gallery" data-gr="Γκαλερί">Gallery</a></li>
+        <li><a href="barber-about.html" data-en="About" data-gr="Σχετικά">About</a></li>
+        <li><a href="barber-booking.html" data-en="Book Now" data-gr="Κράτηση">Book Now</a></li>
+      </ul>
+      <a href="barber-booking.html" class="btn-book" data-en="Book Appointment" data-gr="Κλείστε Ραντεβού">Book Appointment</a>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <span class="eyebrow" data-en="What We Offer" data-gr="Τι Προσφέρουμε">What We Offer</span>
+      <h1 data-en="Services & Pricing" data-gr="Υπηρεσίες & Τιμές">Services & Pricing</h1>
+      <p data-en="Every service crafted with care, precision, and premium products." data-gr="Κάθε υπηρεσία δημιουργείται με φροντίδα, ακρίβεια και premium προϊόντα.">Every service crafted with care, precision, and premium products.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES MENU -->
+  <section class="services-menu">
+    <div class="container">
+      <div class="services-tabs">
+        <button class="tab-btn active" data-tab="tab-cuts" data-en="Haircuts" data-gr="Κουρέματα">Haircuts</button>
+        <button class="tab-btn" data-tab="tab-shave" data-en="Shaving" data-gr="Ξύρισμα">Shaving</button>
+        <button class="tab-btn" data-tab="tab-beard" data-en="Beard" data-gr="Γενειάδα">Beard</button>
+        <button class="tab-btn" data-tab="tab-packages" data-en="Packages" data-gr="Πακέτα">Packages</button>
+        <button class="tab-btn" data-tab="tab-extras" data-en="Extras" data-gr="Extras">Extras</button>
+      </div>
+
+      <!-- HAIRCUTS TAB -->
+      <div id="tab-cuts" class="tab-panel">
+        <table class="services-table">
+          <tr>
+            <td data-en="Classic Haircut" data-gr="Κλασικό Κούρεμα">Classic Haircut</td>
+            <td data-en="Consultation, wash, cut & style" data-gr="Συμβουλή, λούσιμο, κούρεμα & styling">Consultation, wash, cut & style</td>
+            <td>€18</td>
+          </tr>
+          <tr>
+            <td data-en="Premium Haircut" data-gr="Premium Κούρεμα">Premium Haircut</td>
+            <td data-en="Includes scalp massage + premium styling" data-gr="Περιλαμβάνει μασάζ + premium styling">Includes scalp massage + premium styling</td>
+            <td>€25</td>
+          </tr>
+          <tr>
+            <td data-en="Fade Haircut" data-gr="Fade Κούρεμα">Fade Haircut</td>
+            <td data-en="Skin fade, low fade, or mid fade" data-gr="Skin fade, low fade ή mid fade">Skin fade, low fade, or mid fade</td>
+            <td>€22</td>
+          </tr>
+          <tr>
+            <td data-en="Textured / Messy Cut" data-gr="Textured / Messy Cut">Textured / Messy Cut</td>
+            <td data-en="Modern textured styles with product finish" data-gr="Σύγχρονα textured στυλ με προϊόν">Modern textured styles with product finish</td>
+            <td>€20</td>
+          </tr>
+          <tr>
+            <td data-en="Kids Haircut (under 12)" data-gr="Παιδικό Κούρεμα (κάτω 12)">Kids Haircut (under 12)</td>
+            <td data-en="Patient, fun, and precise" data-gr="Υπομονετικό, διασκεδαστικό και ακριβές">Patient, fun, and precise</td>
+            <td>€12</td>
+          </tr>
+          <tr>
+            <td data-en="Senior Haircut (65+)" data-gr="Κούρεμα Ηλικιωμένων (65+)">Senior Haircut (65+)</td>
+            <td data-en="Classic cut with care and patience" data-gr="Κλασικό κούρεμα με φροντίδα">Classic cut with care and patience</td>
+            <td>€14</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- SHAVING TAB -->
+      <div id="tab-shave" class="tab-panel" style="display:none">
+        <table class="services-table">
+          <tr>
+            <td data-en="Classic Shave" data-gr="Κλασικό Ξύρισμα">Classic Shave</td>
+            <td data-en="Hot towel prep, foam, safety razor finish" data-gr="Ζεστή πετσέτα, αφρός, ξύρισμα ασφαλείας">Hot towel prep, foam, safety razor finish</td>
+            <td>€18</td>
+          </tr>
+          <tr>
+            <td data-en="Straight Razor Shave" data-gr="Ξύρισμα με Ξυράφι">Straight Razor Shave</td>
+            <td data-en="The premium experience. Hot towel, pre-shave oil, cut-throat razor" data-gr="Η premium εμπειρία. Ζεστή πετσέτα, λάδι και ξυράφι">The premium experience. Hot towel, pre-shave oil, cut-throat razor</td>
+            <td>€28</td>
+          </tr>
+          <tr>
+            <td data-en="Express Shave" data-gr="Express Ξύρισμα">Express Shave</td>
+            <td data-en="Quick, precise touch-up shave" data-gr="Γρήγορο, ακριβές touch-up ξύρισμα">Quick, precise touch-up shave</td>
+            <td>€12</td>
+          </tr>
+          <tr>
+            <td data-en="Head Shave" data-gr="Ξύρισμα Κεφαλής">Head Shave</td>
+            <td data-en="Complete head shave, hot towel finish" data-gr="Πλήρες ξύρισμα κεφαλής, τελείωμα ζεστής πετσέτας">Complete head shave, hot towel finish</td>
+            <td>€25</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- BEARD TAB -->
+      <div id="tab-beard" class="tab-panel" style="display:none">
+        <table class="services-table">
+          <tr>
+            <td data-en="Beard Trim" data-gr="Τρίμαρισμα Γενειάδας">Beard Trim</td>
+            <td data-en="Scissor trim and clean-up around the edges" data-gr="Ψαλίδι και καθαρισμός γύρω από τις άκρες">Scissor trim and clean-up around the edges</td>
+            <td>€12</td>
+          </tr>
+          <tr>
+            <td data-en="Beard Shape & Style" data-gr="Διαμόρφωση & Styling Γενειάδας">Beard Shape & Style</td>
+            <td data-en="Full sculpting and definition with razor lines" data-gr="Πλήρης διαμόρφωση με γραμμές ξυραφιού">Full sculpting and definition with razor lines</td>
+            <td>€18</td>
+          </tr>
+          <tr>
+            <td data-en="Beard + Haircut Combo" data-gr="Κούρεμα + Γενειάδα Combo">Beard + Haircut Combo</td>
+            <td data-en="Haircut with beard shape at a discounted rate" data-gr="Κούρεμα με διαμόρφωση γενειάδας σε εκπτωτική τιμή">Haircut with beard shape at a discounted rate</td>
+            <td>€30</td>
+          </tr>
+          <tr>
+            <td data-en="Beard Color" data-gr="Βαφή Γενειάδας">Beard Color</td>
+            <td data-en="Full beard coloring to cover greys or add tone" data-gr="Πλήρης βαφή γενειάδας για κάλυψη λευκών τριχών">Full beard coloring to cover greys or add tone</td>
+            <td>€22</td>
+          </tr>
+          <tr>
+            <td data-en="Beard Conditioning Treatment" data-gr="Θεραπεία Γενειάδας">Beard Conditioning Treatment</td>
+            <td data-en="Deep conditioning with premium beard oils" data-gr="Βαθιά ενυδάτωση με premium έλαια γενειάδας">Deep conditioning with premium beard oils</td>
+            <td>€15</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- PACKAGES TAB -->
+      <div id="tab-packages" class="tab-panel" style="display:none">
+        <table class="services-table">
+          <tr>
+            <td data-en="The Gentleman" data-gr="Ο Κύριος">The Gentleman</td>
+            <td data-en="Haircut + hot towel shave" data-gr="Κούρεμα + ξύρισμα με ζεστή πετσέτα">Haircut + hot towel shave</td>
+            <td>€38 <span style="color:var(--cream-dim);font-size:0.8rem">save €8</span></td>
+          </tr>
+          <tr>
+            <td data-en="The Connoisseur" data-gr="Ο Γνώστης">The Connoisseur</td>
+            <td data-en="Premium haircut + beard shape + straight razor shave" data-gr="Premium κούρεμα + διαμόρφωση γενειάδας + ξύρισμα ξυραφιού">Premium haircut + beard shape + straight razor shave</td>
+            <td>€55 <span style="color:var(--cream-dim);font-size:0.8rem">save €13</span></td>
+          </tr>
+          <tr>
+            <td data-en="The Full Package" data-gr="Το Πλήρες Πακέτο">The Full Package</td>
+            <td data-en="Haircut + shave + beard + head massage + hot towel" data-gr="Κούρεμα + ξύρισμα + γενειάδα + μασάζ + ζεστή πετσέτα">Haircut + shave + beard + head massage + hot towel</td>
+            <td>€70 <span style="color:var(--cream-dim);font-size:0.8rem">save €18</span></td>
+          </tr>
+          <tr>
+            <td data-en="Father & Son" data-gr="Πατέρας & Γιος">Father & Son</td>
+            <td data-en="Adult + kids haircut together" data-gr="Ενήλικας + παιδικό κούρεμα μαζί">Adult + kids haircut together</td>
+            <td>€25 <span style="color:var(--cream-dim);font-size:0.8rem">save €5</span></td>
+          </tr>
+          <tr>
+            <td data-en="Monthly Member" data-gr="Μηνιαίο Μέλος">Monthly Member</td>
+            <td data-en="2 haircuts + unlimited beard trims per month" data-gr="2 κουρέματα + απεριόριστα τριμαρίσματα γενειάδας το μήνα">2 haircuts + unlimited beard trims per month</td>
+            <td>€55/mo</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- EXTRAS TAB -->
+      <div id="tab-extras" class="tab-panel" style="display:none">
+        <table class="services-table">
+          <tr>
+            <td data-en="Head & Scalp Massage" data-gr="Μασάζ Κεφαλής">Head & Scalp Massage</td>
+            <td data-en="15-minute relaxing scalp massage with premium oils" data-gr="15 λεπτά χαλαρωτικό μασάζ με premium έλαια">15-minute relaxing scalp massage with premium oils</td>
+            <td>€12</td>
+          </tr>
+          <tr>
+            <td data-en="Grey Coverage" data-gr="Κάλυψη Γκρίζων">Grey Coverage</td>
+            <td data-en="Natural-looking color to blend grey hairs" data-gr="Φυσική εμφάνιση για κάλυψη γκρίζων τριχών">Natural-looking color to blend grey hairs</td>
+            <td>€20+</td>
+          </tr>
+          <tr>
+            <td data-en="Black Mask" data-gr="Black Mask">Black Mask</td>
+            <td data-en="Purifying face mask treatment" data-gr="Θεραπεία προσώπου με μαύρη μάσκα">Purifying face mask treatment</td>
+            <td>€15</td>
+          </tr>
+          <tr>
+            <td data-en="Eyebrow Grooming" data-gr="Περιποίηση Φρυδιών">Eyebrow Grooming</td>
+            <td data-en="Waxing and shaping of eyebrows" data-gr="Αποτρίχωση και διαμόρφωση φρυδιών">Waxing and shaping of eyebrows</td>
+            <td>€10</td>
+          </tr>
+          <tr>
+            <td data-en="Ear Waxing" data-gr="Αποτρίχωση Αυτιών">Ear Waxing</td>
+            <td data-en="Clean ear hair removal" data-gr="Καθαρή αφαίρεση τριχών από τα αυτιά">Clean ear hair removal</td>
+            <td>€8</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING PACKAGES CARDS -->
+  <section class="pricing-section">
+    <div class="container">
+      <div class="section-header center reveal">
+        <span class="eyebrow" data-en="Memberships" data-gr="Συνδρομές">Memberships</span>
+        <h2 class="section-title" data-en="Choose Your Plan" data-gr="Επιλέξτε το Πλάνο σας">Choose Your Plan</h2>
+        <p class="section-subtitle" data-en="Regular clients get the best value with our membership packages." data-gr="Οι τακτικοί πελάτες έχουν την καλύτερη αξία με τις συνδρομές μας.">Regular clients get the best value with our membership packages.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card reveal">
+          <span class="pricing-tier" data-en="Essential" data-gr="Βασικό">Essential</span>
+          <div class="pricing-price">€30<span>/mo</span></div>
+          <p class="pricing-desc" data-en="Perfect for the man who visits once a month." data-gr="Ιδανικό για τον άνδρα που επισκέπτεται μία φορά το μήνα.">Perfect for the man who visits once a month.</p>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i><span data-en="1 Haircut per month" data-gr="1 Κούρεμα το μήνα">1 Haircut per month</span></li>
+            <li><i class="fas fa-check"></i><span data-en="10% off all services" data-gr="10% έκπτωση σε όλες τις υπηρεσίες">10% off all services</span></li>
+            <li><i class="fas fa-check"></i><span data-en="Priority booking" data-gr="Προτεραιότητα στην κράτηση">Priority booking</span></li>
+            <li class="unavailable"><i class="fas fa-times"></i><span data-en="Beard service included" data-gr="Υπηρεσία γενειάδας">Beard service included</span></li>
+            <li class="unavailable"><i class="fas fa-times"></i><span data-en="Complimentary drink" data-gr="Δωρεάν ποτό">Complimentary drink</span></li>
+          </ul>
+          <a href="barber-booking.html" class="btn btn-outline" style="width:100%;justify-content:center">
+            <span data-en="Get Started" data-gr="Ξεκινήστε">Get Started</span>
+          </a>
+        </div>
+
+        <div class="pricing-card featured reveal">
+          <div class="pricing-badge" data-en="Most Popular" data-gr="Πιο Δημοφιλές">Most Popular</div>
+          <span class="pricing-tier" data-en="Classic" data-gr="Κλασικό">Classic</span>
+          <div class="pricing-price">€55<span>/mo</span></div>
+          <p class="pricing-desc" data-en="The choice of our most loyal regulars. Best overall value." data-gr="Η επιλογή των πιο πιστών πελατών μας. Καλύτερη αξία.">The choice of our most loyal regulars. Best overall value.</p>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i><span data-en="2 Haircuts per month" data-gr="2 Κουρέματα το μήνα">2 Haircuts per month</span></li>
+            <li><i class="fas fa-check"></i><span data-en="Unlimited beard trims" data-gr="Απεριόριστα τριμαρίσματα γενειάδας">Unlimited beard trims</span></li>
+            <li><i class="fas fa-check"></i><span data-en="15% off all services" data-gr="15% έκπτωση σε όλες τις υπηρεσίες">15% off all services</span></li>
+            <li><i class="fas fa-check"></i><span data-en="Priority booking" data-gr="Προτεραιότητα στην κράτηση">Priority booking</span></li>
+            <li class="unavailable"><i class="fas fa-times"></i><span data-en="Complimentary drink" data-gr="Δωρεάν ποτό">Complimentary drink</span></li>
+          </ul>
+          <a href="barber-booking.html" class="btn btn-primary" style="width:100%;justify-content:center">
+            <span data-en="Join Classic" data-gr="Γίνε Μέλος">Join Classic</span>
+          </a>
+        </div>
+
+        <div class="pricing-card reveal">
+          <span class="pricing-tier" data-en="Premium" data-gr="Premium">Premium</span>
+          <div class="pricing-price">€90<span>/mo</span></div>
+          <p class="pricing-desc" data-en="For the discerning gentleman who wants nothing but the best." data-gr="Για τον απαιτητικό κύριο που θέλει μόνο τα καλύτερα.">For the discerning gentleman who wants nothing but the best.</p>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i><span data-en="Unlimited haircuts" data-gr="Απεριόριστα κουρέματα">Unlimited haircuts</span></li>
+            <li><i class="fas fa-check"></i><span data-en="Unlimited beard services" data-gr="Απεριόριστες υπηρεσίες γενειάδας">Unlimited beard services</span></li>
+            <li><i class="fas fa-check"></i><span data-en="20% off all services" data-gr="20% έκπτωση σε όλες τις υπηρεσίες">20% off all services</span></li>
+            <li><i class="fas fa-check"></i><span data-en="Dedicated barber" data-gr="Αφοσιωμένος κουρέας">Dedicated barber</span></li>
+            <li><i class="fas fa-check"></i><span data-en="Complimentary drink" data-gr="Δωρεάν ποτό">Complimentary drink</span></li>
+          </ul>
+          <a href="barber-booking.html" class="btn btn-outline" style="width:100%;justify-content:center">
+            <span data-en="Go Premium" data-gr="Αποκτήστε Premium">Go Premium</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <span class="eyebrow" data-en="Ready to Book?" data-gr="Έτοιμος;">Ready to Book?</span>
+      <h2 data-en="Your Next Cut Awaits" data-gr="Το Επόμενο Κούρεμα σας Περιμένει">Your Next Cut Awaits</h2>
+      <p data-en="Book online in 2 minutes — or call us and we'll sort it out." data-gr="Κλείστε online σε 2 λεπτά — ή καλέστε μας.">Book online in 2 minutes — or call us and we'll sort it out.</p>
+      <div class="cta-actions">
+        <a href="barber-booking.html" class="btn btn-primary"><span data-en="Book Now" data-gr="Κλείστε Τώρα">Book Now</span> <i class="fas fa-arrow-right"></i></a>
+        <a href="tel:+302101234567" class="btn btn-outline"><i class="fas fa-phone"></i> <span data-en="Call Us" data-gr="Καλέστε μας">Call Us</span></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-main">BarberHaus</span>
+            <span class="logo-sub" data-en="Premium Grooming" data-gr="Ανδρική Περιποίηση">Premium Grooming</span>
+          </div>
+          <p data-en="Precision cuts, classic shaves, and timeless style in the heart of Athens since 2008." data-gr="Ακριβής κουρέματα, κλασικό ξύρισμα και διαχρονικό στυλ στην καρδιά της Αθήνας από το 2008.">Precision cuts, classic shaves, and timeless style in the heart of Athens since 2008.</p>
+          <div class="footer-socials">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 data-en="Navigation" data-gr="Πλοήγηση">Navigation</h4>
+          <ul>
+            <li><a href="index.html" data-en="Home" data-gr="Αρχική">Home</a></li>
+            <li><a href="barber-services.html" data-en="Services" data-gr="Υπηρεσίες">Services</a></li>
+            <li><a href="barber-gallery.html" data-en="Gallery" data-gr="Γκαλερί">Gallery</a></li>
+            <li><a href="barber-about.html" data-en="About" data-gr="Σχετικά">About</a></li>
+            <li><a href="barber-booking.html" data-en="Book Now" data-gr="Κράτηση">Book Now</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-en="Hours" data-gr="Ωράριο">Hours</h4>
+          <ul>
+            <li><a href="#" data-en="Mon–Fri: 9:00 – 21:00" data-gr="Δευ–Παρ: 9:00 – 21:00">Mon–Fri: 9:00 – 21:00</a></li>
+            <li><a href="#" data-en="Saturday: 10:00 – 18:00" data-gr="Σάββατο: 10:00 – 18:00">Saturday: 10:00 – 18:00</a></li>
+            <li><a href="#" data-en="Sunday: Closed" data-gr="Κυριακή: Κλειστά">Sunday: Closed</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-en="Contact" data-gr="Επικοινωνία">Contact</h4>
+          <ul>
+            <li><a href="#">Ermou 45, Athens</a></li>
+            <li><a href="tel:+302101234567">+30 210 123 4567</a></li>
+            <li><a href="mailto:hello@barberhaus.gr">hello@barberhaus.gr</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-en="© 2024 BarberHaus Athens. All rights reserved." data-gr="© 2024 BarberHaus Athens. Με επιφύλαξη παντός δικαιώματος.">© 2024 BarberHaus Athens. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="barber-script.js"></script>
+</body>
+</html>
