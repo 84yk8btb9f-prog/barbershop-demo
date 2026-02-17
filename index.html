@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BarberHaus — Premium Barbershop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="barber-style.css">
+</head>
+<body>
+
+  <!-- LANGUAGE TOGGLE -->
+  <div class="language-toggle">
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="gr">ΕΛ</button>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-main">BarberHaus</span>
+        <span class="logo-sub" data-en="Premium Grooming" data-gr="Ανδρική Περιποίηση">Premium Grooming</span>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="active" data-en="Home" data-gr="Αρχική">Home</a></li>
+        <li><a href="barber-services.html" data-en="Services" data-gr="Υπηρεσίες">Services</a></li>
+        <li><a href="barber-gallery.html" data-en="Gallery" data-gr="Γκαλερί">Gallery</a></li>
+        <li><a href="barber-about.html" data-en="About" data-gr="Σχετικά">About</a></li>
+        <li><a href="barber-booking.html" data-en="Book Now" data-gr="Κράτηση">Book Now</a></li>
+      </ul>
+      <a href="barber-booking.html" class="btn-book" data-en="Book Appointment" data-gr="Κλείστε Ραντεβού">Book Appointment</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-pattern"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span data-en="Est. 2008 · Athens, Greece" data-gr="Ίδρ. 2008 · Αθήνα, Ελλάδα">Est. 2008 · Athens, Greece</span>
+        </div>
+        <h1 class="hero-title">
+          <span data-en="The Art of" data-gr="Η Τέχνη της">The Art of</span><br>
+          <em data-en="Perfect Grooming" data-gr="Τέλειας Περιποίησης">Perfect Grooming</em>
+        </h1>
+        <p class="hero-desc" data-en="Precision cuts, classic shaves, and modern style — all under one roof. Where tradition meets craftsmanship." data-gr="Ακριβής κούρεμα, κλασικό ξύρισμα και σύγχρονο στυλ. Εκεί που η παράδοση συναντά την τέχνη.">
+          Precision cuts, classic shaves, and modern style — all under one roof. Where tradition meets craftsmanship.
+        </p>
+        <div class="hero-actions">
+          <a href="barber-booking.html" class="btn btn-primary">
+            <span data-en="Book Appointment" data-gr="Κλείστε Ραντεβού">Book Appointment</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="barber-services.html" class="btn btn-outline">
+            <span data-en="View Services" data-gr="Δες Υπηρεσίες">View Services</span>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num" data-target="16" data-suffix="+">0+</span>
+            <span class="stat-label" data-en="Years of Experience" data-gr="Χρόνια Εμπειρίας">Years of Experience</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="4800" data-suffix="+">0+</span>
+            <span class="stat-label" data-en="Happy Clients" data-gr="Ικανοποιημένοι Πελάτες">Happy Clients</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="5" data-suffix="">0</span>
+            <span class="stat-label" data-en="Master Barbers" data-gr="Μάστερ Κουρείς">Master Barbers</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-wrap">
+          <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&q=90" alt="Barber at work">
+          <div class="hero-float-card">
+            <div class="card-label" data-en="Open Today" data-gr="Ανοιχτά Σήμερα">Open Today</div>
+            <div class="card-value">9:00 — 21:00</div>
+            <div class="card-sub" data-en="Mon – Sat" data-gr="Δευ – Σαβ">Mon – Sat</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES PREVIEW -->
+  <section class="services-section">
+    <div class="container">
+      <div class="section-header center reveal">
+        <span class="eyebrow" data-en="Our Services" data-gr="Υπηρεσίες μας">Our Services</span>
+        <h2 class="section-title" data-en="Crafted for the Modern Gentleman" data-gr="Δημιουργήθηκε για τον Σύγχρονο Κύριο">Crafted for the Modern Gentleman</h2>
+        <p class="section-subtitle" data-en="Every service is performed with precision and attention to detail by our team of master barbers." data-gr="Κάθε υπηρεσία εκτελείται με ακρίβεια από την ομάδα μας.">Every service is performed with precision and attention to detail by our team of master barbers.</p>
+      </div>
+      <div class="services-grid reveal">
+        <div class="service-card">
+          <div class="service-icon">✂</div>
+          <h3 data-en="Classic Haircut" data-gr="Κλασικό Κούρεμα">Classic Haircut</h3>
+          <p data-en="Consultation, wash, precision cut, and styling. Tailored to your face shape and lifestyle." data-gr="Συμβουλή, λούσιμο, κούρεμα ακριβείας και styling. Προσαρμοσμένο στο πρόσωπό σας.">Consultation, wash, precision cut, and styling. Tailored to your face shape and lifestyle.</p>
+          <div class="service-price">€18<span data-en="from" data-gr="από">from</span></div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🪒</div>
+          <h3 data-en="Hot Towel Shave" data-gr="Ξύρισμα με Ζεστή Πετσέτα">Hot Towel Shave</h3>
+          <p data-en="The ultimate traditional shave. Hot towel prep, premium lather, straight razor finish." data-gr="Το απόλυτο παραδοσιακό ξύρισμα. Προετοιμασία με ζεστή πετσέτα, ξυράφι ακριβείας.">The ultimate traditional shave. Hot towel prep, premium lather, straight razor finish.</p>
+          <div class="service-price">€22<span data-en="from" data-gr="από">from</span></div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">👑</div>
+          <h3 data-en="The Full Package" data-gr="Πλήρες Πακέτο">The Full Package</h3>
+          <p data-en="Haircut + shave + beard trim + hot towel treatment. The complete grooming experience." data-gr="Κούρεμα + ξύρισμα + περιποίηση γενειάδας + θεραπεία. Η πλήρης εμπειρία.">Haircut + shave + beard trim + hot towel treatment. The complete grooming experience.</p>
+          <div class="service-price">€45<span data-en="package" data-gr="πακέτο">package</span></div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🧔</div>
+          <h3 data-en="Beard Shaping" data-gr="Διαμόρφωση Γενειάδας">Beard Shaping</h3>
+          <p data-en="Expert trimming, shaping, and styling of your beard. Clean lines and balanced proportions." data-gr="Εξειδικευμένο κλάδεμα, διαμόρφωση και styling γενειάδας. Καθαρές γραμμές.">Expert trimming, shaping, and styling of your beard. Clean lines and balanced proportions.</p>
+          <div class="service-price">€15<span data-en="from" data-gr="από">from</span></div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">✦</div>
+          <h3 data-en="Kids Haircut" data-gr="Παιδικό Κούρεμα">Kids Haircut</h3>
+          <p data-en="Gentle and patient cuts for children up to 12 years. Making every visit fun and comfortable." data-gr="Απαλά και υπομονετικά κουρέματα για παιδιά έως 12 ετών. Κάθε επίσκεψη ευχάριστη.">Gentle and patient cuts for children up to 12 years. Making every visit fun and comfortable.</p>
+          <div class="service-price">€12<span data-en="from" data-gr="από">from</span></div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💆</div>
+          <h3 data-en="Head & Scalp Massage" data-gr="Μασάζ Κεφαλής">Head & Scalp Massage</h3>
+          <p data-en="Relaxing scalp massage with premium oils. Stimulates circulation, relieves tension." data-gr="Χαλαρωτικό μασάζ τριχωτής κεφαλής με premium έλαια. Τόνωση κυκλοφορίας.">Relaxing scalp massage with premium oils. Stimulates circulation, relieves tension.</p>
+          <div class="service-price">€20<span data-en="add-on" data-gr="πρόσθεση">add-on</span></div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:3rem;">
+        <a href="barber-services.html" class="btn btn-outline reveal">
+          <span data-en="View Full Menu & Pricing" data-gr="Δες Πλήρες Μενού και Τιμές">View Full Menu & Pricing</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPLIT SECTION — ABOUT -->
+  <section class="split-section">
+    <div class="container">
+      <div class="split-grid">
+        <div class="split-image reveal">
+          <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&q=90" alt="Barbershop interior">
+          <div class="gold-line-accent"></div>
+        </div>
+        <div class="split-text reveal">
+          <span class="eyebrow" data-en="Our Story" data-gr="Η Ιστορία μας">Our Story</span>
+          <h2 data-en="Where Craftsmanship Meets Tradition" data-gr="Εκεί που η Τέχνη Συναντά την Παράδοση">Where Craftsmanship Meets Tradition</h2>
+          <div class="gold-rule"><span>✦</span></div>
+          <p data-en="Founded in 2008 in the heart of Athens, BarberHaus was born from a passion for the timeless art of traditional barbering. We believed men deserved more than a quick cut — they deserved an experience." data-gr="Ιδρύθηκε το 2008 στην καρδιά της Αθήνας, το BarberHaus γεννήθηκε από πάθος για την τέχνη του παραδοσιακού κουρείου. Πιστεύαμε ότι οι άνδρες άξιζαν κάτι περισσότερο από ένα γρήγορο κούρεμα — άξιζαν μια εμπειρία.">
+            Founded in 2008 in the heart of Athens, BarberHaus was born from a passion for the timeless art of traditional barbering. We believed men deserved more than a quick cut — they deserved an experience.
+          </p>
+          <ul class="checklist">
+            <li data-en="Traditional techniques, modern execution" data-gr="Παραδοσιακές τεχνικές, σύγχρονη εκτέλεση">Traditional techniques, modern execution</li>
+            <li data-en="Premium grooming products only" data-gr="Μόνο premium προϊόντα περιποίησης">Premium grooming products only</li>
+            <li data-en="Certified master barbers with 10+ years each" data-gr="Πιστοποιημένοι master κουρείς με 10+ χρόνια ο καθένας">Certified master barbers with 10+ years each</li>
+            <li data-en="Relaxed, private, no-rush atmosphere" data-gr="Χαλαρή, ιδιωτική ατμόσφαιρα χωρίς βιάση">Relaxed, private, no-rush atmosphere</li>
+          </ul>
+          <a href="barber-about.html" class="btn btn-ghost" style="margin-top:0.5rem">
+            <span data-en="Our Full Story" data-gr="Η Ιστορία μας">Our Full Story</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM PREVIEW -->
+  <section class="team-section">
+    <div class="container">
+      <div class="section-header center reveal">
+        <span class="eyebrow" data-en="The Team" data-gr="Η Ομάδα">The Team</span>
+        <h2 class="section-title" data-en="Meet Your Barbers" data-gr="Γνώρισε τους Κουρείς σου">Meet Your Barbers</h2>
+      </div>
+      <div class="team-grid">
+        <div class="barber-card reveal">
+          <div class="barber-photo">
+            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=500&q=80" alt="Marco Rossi">
+            <div class="barber-photo-overlay"></div>
+          </div>
+          <div class="barber-info">
+            <h3>Marco Rossi</h3>
+            <span class="barber-role" data-en="Founder & Head Barber" data-gr="Ιδρυτής & Επικεφαλής Κουρέας">Founder & Head Barber</span>
+            <p data-en="16 years experience. Trained in Milan. Specialist in classic cuts and straight razor shaves." data-gr="16 χρόνια εμπειρία. Εκπαιδεύτηκε στο Μιλάνο. Ειδικός σε κλασικά κουρέματα.">16 years experience. Trained in Milan. Specialist in classic cuts and straight razor shaves.</p>
+            <div class="barber-socials">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="barber-card reveal">
+          <div class="barber-photo">
+            <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=500&q=80" alt="Nikos Papadopoulos">
+            <div class="barber-photo-overlay"></div>
+          </div>
+          <div class="barber-info">
+            <h3>Nikos Papadopoulos</h3>
+            <span class="barber-role" data-en="Senior Barber & Beard Specialist" data-gr="Ανώτερος Κουρέας & Ειδικός Γενειάδας">Senior Barber & Beard Specialist</span>
+            <p data-en="12 years experience. Expert in fade techniques and beard sculpting. Athenian born and raised." data-gr="12 χρόνια εμπειρία. Ειδικός σε fades και διαμόρφωση γενειάδας. Αθηναίος.">12 years experience. Expert in fade techniques and beard sculpting. Athenian born and raised.</p>
+            <div class="barber-socials">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="barber-card reveal">
+          <div class="barber-photo">
+            <img src="https://images.unsplash.com/photo-1600486913747-55e5470d0600?w=500&q=80" alt="Alex Stavros">
+            <div class="barber-photo-overlay"></div>
+          </div>
+          <div class="barber-info">
+            <h3>Alex Stavros</h3>
+            <span class="barber-role" data-en="Style Director" data-gr="Διευθυντής Στυλ">Style Director</span>
+            <p data-en="10 years experience. Contemporary styles, textured cuts, and skin fades. Social media favourite." data-gr="10 χρόνια εμπειρία. Σύγχρονα στυλ, textured cuts. Αγαπημένος στα social media.">10 years experience. Contemporary styles, textured cuts, and skin fades. Social media favourite.</p>
+            <div class="barber-socials">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY TEASER -->
+  <section class="gallery-section">
+    <div class="container">
+      <div class="section-header center reveal">
+        <span class="eyebrow" data-en="Our Work" data-gr="Οι Δουλειές μας">Our Work</span>
+        <h2 class="section-title" data-en="The Results Speak" data-gr="Τα Αποτελέσματα Μιλούν">The Results Speak</h2>
+      </div>
+      <div class="gallery-grid reveal">
+        <div class="gallery-item tall">
+          <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80" alt="Haircut">
+          <div class="gallery-overlay"><span data-en="Classic Fade" data-gr="Κλασικό Fade">Classic Fade</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80" alt="Beard trim">
+          <div class="gallery-overlay"><span data-en="Beard Art" data-gr="Τέχνη Γενειάδας">Beard Art</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=80" alt="Shop interior">
+          <div class="gallery-overlay"><span data-en="The Space" data-gr="Ο Χώρος">The Space</span></div>
+        </div>
+        <div class="gallery-item wide">
+          <img src="https://images.unsplash.com/photo-1622288432450-277d0fef5ed6?w=900&q=80" alt="Shave">
+          <div class="gallery-overlay"><span data-en="Hot Towel Shave" data-gr="Ξύρισμα με Ζεστή Πετσέτα">Hot Towel Shave</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?w=600&q=80" alt="Tools">
+          <div class="gallery-overlay"><span data-en="Precision Tools" data-gr="Εργαλεία Ακριβείας">Precision Tools</span></div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:2.5rem">
+        <a href="barber-gallery.html" class="btn btn-outline reveal">
+          <span data-en="View Full Gallery" data-gr="Δες Πλήρη Γκαλερί">View Full Gallery</span>
+          <i class="fas fa-images"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header center reveal">
+        <span class="eyebrow" data-en="Reviews" data-gr="Κριτικές">Reviews</span>
+        <h2 class="section-title" data-en="What Our Clients Say" data-gr="Τι Λένε οι Πελάτες μας">What Our Clients Say</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text" data-en="Best barbershop I've been to in Athens. Marco is an artist — my hair has never looked this sharp. Won't go anywhere else." data-gr="Το καλύτερο κουρείο που έχω πάει στην Αθήνα. Ο Marco είναι καλλιτέχνης — τα μαλλιά μου δεν ήταν ποτέ τόσο τέλεια.">Best barbershop I've been to in Athens. Marco is an artist — my hair has never looked this sharp. Won't go anywhere else.</p>
+          <div class="testimonial-author">
+            <img src="https://i.pravatar.cc/150?img=11" alt="Dimitris">
+            <div class="author-info">
+              <strong>Dimitris K.</strong>
+              <span data-en="Regular Client · 3 years" data-gr="Τακτικός Πελάτης · 3 χρόνια">Regular Client · 3 years</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text" data-en="The hot towel shave is a religious experience. I come every two weeks. The atmosphere, the service, the result — 10/10." data-gr="Το ξύρισμα με ζεστή πετσέτα είναι εμπειρία ζωής. Έρχομαι κάθε δύο εβδομάδες. Ατμόσφαιρα, υπηρεσία, αποτέλεσμα — 10/10.">The hot towel shave is a religious experience. I come every two weeks. The atmosphere, the service, the result — 10/10.</p>
+          <div class="testimonial-author">
+            <img src="https://i.pravatar.cc/150?img=32" alt="George">
+            <div class="author-info">
+              <strong>George M.</strong>
+              <span data-en="Regular Client · 5 years" data-gr="Τακτικός Πελάτης · 5 χρόνια">Regular Client · 5 years</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text" data-en="Brought my son for his first proper haircut and Nikos was incredible with him. Patient, calm, and the result was perfect. We're customers for life." data-gr="Έφερα τον γιο μου για το πρώτο του σωστό κούρεμα και ο Νίκος ήταν καταπληκτικός. Υπομονετικός, ήρεμος και το αποτέλεσμα τέλειο.">Brought my son for his first proper haircut and Nikos was incredible with him. Patient, calm, and the result was perfect. We're customers for life.</p>
+          <div class="testimonial-author">
+            <img src="https://i.pravatar.cc/150?img=53" alt="Stavros">
+            <div class="author-info">
+              <strong>Stavros P.</strong>
+              <span data-en="New Client" data-gr="Νέος Πελάτης">New Client</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <span class="eyebrow" data-en="Ready?" data-gr="Έτοιμος;">Ready?</span>
+      <h2 data-en="Step Into the Chair" data-gr="Κάτσε στην Καρέκλα">Step Into the Chair</h2>
+      <p data-en="Book your appointment online in under 2 minutes. Walk out looking sharper than ever." data-gr="Κλείστε ραντεβού online σε λιγότερο από 2 λεπτά. Βγείτε πιο στυλάτοι από ποτέ.">Book your appointment online in under 2 minutes. Walk out looking sharper than ever.</p>
+      <div class="cta-actions">
+        <a href="barber-booking.html" class="btn btn-primary">
+          <span data-en="Book Now" data-gr="Κλείστε Τώρα">Book Now</span>
+          <i class="fas fa-calendar-alt"></i>
+        </a>
+        <a href="tel:+302101234567" class="btn btn-outline">
+          <i class="fas fa-phone"></i>
+          <span data-en="Call Us" data-gr="Καλέστε μας">Call Us</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-main">BarberHaus</span>
+            <span class="logo-sub" data-en="Premium Grooming" data-gr="Ανδρική Περιποίηση">Premium Grooming</span>
+          </div>
+          <p data-en="Precision cuts, classic shaves, and timeless style in the heart of Athens since 2008." data-gr="Ακριβής κουρέματα, κλασικό ξύρισμα και διαχρονικό στυλ στην καρδιά της Αθήνας από το 2008.">Precision cuts, classic shaves, and timeless style in the heart of Athens since 2008.</p>
+          <div class="footer-socials">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-google"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 data-en="Navigation" data-gr="Πλοήγηση">Navigation</h4>
+          <ul>
+            <li><a href="index.html" data-en="Home" data-gr="Αρχική">Home</a></li>
+            <li><a href="barber-services.html" data-en="Services" data-gr="Υπηρεσίες">Services</a></li>
+            <li><a href="barber-gallery.html" data-en="Gallery" data-gr="Γκαλερί">Gallery</a></li>
+            <li><a href="barber-about.html" data-en="About" data-gr="Σχετικά">About</a></li>
+            <li><a href="barber-booking.html" data-en="Book Now" data-gr="Κράτηση">Book Now</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-en="Services" data-gr="Υπηρεσίες">Services</h4>
+          <ul>
+            <li><a href="barber-services.html" data-en="Haircuts" data-gr="Κουρέματα">Haircuts</a></li>
+            <li><a href="barber-services.html" data-en="Beard Shaping" data-gr="Γενειάδα">Beard Shaping</a></li>
+            <li><a href="barber-services.html" data-en="Hot Towel Shave" data-gr="Ξύρισμα">Hot Towel Shave</a></li>
+            <li><a href="barber-services.html" data-en="Kids Cuts" data-gr="Παιδικά">Kids Cuts</a></li>
+            <li><a href="barber-services.html" data-en="Full Packages" data-gr="Πακέτα">Full Packages</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-en="Contact" data-gr="Επικοινωνία">Contact</h4>
+          <ul>
+            <li><a href="#">Ermou 45, Athens</a></li>
+            <li><a href="tel:+302101234567">+30 210 123 4567</a></li>
+            <li><a href="mailto:hello@barberhaus.gr">hello@barberhaus.gr</a></li>
+            <li><a href="#" data-en="Mon–Fri: 9–21" data-gr="Δευ–Παρ: 9–21">Mon–Fri: 9–21</a></li>
+            <li><a href="#" data-en="Sat: 10–18" data-gr="Σαβ: 10–18">Sat: 10–18</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-en="© 2024 BarberHaus Athens. All rights reserved." data-gr="© 2024 BarberHaus Athens. Με επιφύλαξη παντός δικαιώματος.">© 2024 BarberHaus Athens. All rights reserved.</p>
+        <div style="display:flex;gap:1.5rem">
+          <a href="#" data-en="Privacy Policy" data-gr="Πολιτική Απορρήτου">Privacy Policy</a>
+          <a href="#" data-en="Terms of Service" data-gr="Όροι Χρήσης">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="barber-script.js"></script>
+</body>
+</html>
