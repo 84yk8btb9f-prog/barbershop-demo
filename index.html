@@ -9,6 +9,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="barber-style.css">
+
+  <style>
+    .built-by {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.3);
+      margin-top: 6px;
+    }
+    .built-by a {
+      color: rgba(212, 175, 55, 0.7);
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+      padding-bottom: 1px;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+    .built-by a:hover {
+      color: rgba(212, 175, 55, 1);
+      border-color: rgba(212, 175, 55, 0.7);
+    }
+  </style>
 </head>
 <body>
 
@@ -389,10 +410,11 @@
       </div>
       <div class="footer-bottom">
         <p data-en="© 2024 BarberHaus Athens. All rights reserved." data-gr="© 2024 BarberHaus Athens. Με επιφύλαξη παντός δικαιώματος.">© 2024 BarberHaus Athens. All rights reserved.</p>
-        <div style="display:flex;gap:1.5rem">
+        <div style="display:flex;gap:1.5rem;align-items:center;">
           <a href="#" data-en="Privacy Policy" data-gr="Πολιτική Απορρήτου">Privacy Policy</a>
           <a href="#" data-en="Terms of Service" data-gr="Όροι Χρήσης">Terms of Service</a>
         </div>
+        <p class="built-by">Built by <a href="https://nikolassapa.vercel.app" target="_blank" rel="noopener noreferrer">Nikolas Sapalidis</a></p>
       </div>
     </div>
   </footer>
