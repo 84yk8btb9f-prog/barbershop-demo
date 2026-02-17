@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | BarberHaus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="barber-style.css">
+  <style>
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      backdrop-filter: blur(8px);
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 0 80px rgba(0,0,0,0.8);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 1.5rem; right: 1.5rem;
+      color: var(--cream);
+      font-size: 1.5rem;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .lightbox-close:hover { background: rgba(201,168,76,0.3); color: var(--gold); }
+    .gallery-masonry-item { cursor: pointer; }
+  </style>
+</head>
+<body>
+
+  <div class="language-toggle">
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="gr">ΕΛ</button>
+  </div>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-main">BarberHaus</span>
+        <span class="logo-sub" data-en="Premium Grooming" data-gr="Ανδρική Περιποίηση">Premium Grooming</span>
+      </div>
+      <button class="menu-toggle"><span></span><span></span><span></span></button>
+      <ul class="nav-menu">
+        <li><a href="index.html" data-en="Home" data-gr="Αρχική">Home</a></li>
+        <li><a href="barber-services.html" data-en="Services" data-gr="Υπηρεσίες">Services</a></li>
+        <li><a href="barber-gallery.html" class="active" data-en="Gallery" data-gr="Γκαλερί">Gallery</a></li>
+        <li><a href="barber-about.html" data-en="About" data-gr="Σχετικά">About</a></li>
+        <li><a href="barber-booking.html" data-en="Book Now" data-gr="Κράτηση">Book Now</a></li>
+      </ul>
+      <a href="barber-booking.html" class="btn-book" data-en="Book Appointment" data-gr="Κλείστε Ραντεβού">Book Appointment</a>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <span class="eyebrow" data-en="Our Work" data-gr="Οι Δουλειές μας">Our Work</span>
+      <h1 data-en="The Gallery" data-gr="Η Γκαλερί">The Gallery</h1>
+      <p data-en="Every photo is a result we're proud of. Let the work speak for itself." data-gr="Κάθε φωτογραφία είναι ένα αποτέλεσμα που είμαστε περήφανοι. Ας μιλήσει η δουλειά.">Every photo is a result we're proud of. Let the work speak for itself.</p>
+    </div>
+  </section>
+
+  <section class="gallery-page">
+    <div class="container">
+      <div class="gallery-filters">
+        <button class="gallery-filter-btn active" data-en="All Work" data-gr="Όλα">All Work</button>
+        <button class="gallery-filter-btn" data-en="Haircuts" data-gr="Κουρέματα">Haircuts</button>
+        <button class="gallery-filter-btn" data-en="Fades" data-gr="Fades">Fades</button>
+        <button class="gallery-filter-btn" data-en="Beards" data-gr="Γενειάδες">Beards</button>
+        <button class="gallery-filter-btn" data-en="Shaves" data-gr="Ξυρίσματα">Shaves</button>
+        <button class="gallery-filter-btn" data-en="The Shop" data-gr="Το Μαγαζί">The Shop</button>
+      </div>
+
+      <div class="gallery-masonry" id="galleryGrid">
+        <div class="gallery-masonry-item reveal" onclick="openLightbox(this)">
+          <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=85" alt="Classic cut">
+        </div>
+        <div class="gallery-masonry-item reveal" onclick="openLightbox(this)">
+          <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=85" alt="Beard">
+        </div>
+        <div class="gallery-masonry-item reveal" onclick="openLightbox(this)">
+          <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=85" alt="Shop">
+        </div>
+        <div class="gallery-masonry-item reveal" onclick="openLightbox(this)">
+          <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=600&q=85" alt="Barber work">
+        </div>
+        <div class="gallery-masonry-item reveal" onclick="openLightbox(this)">
+          <img src="https://images.unsplash.com/photo-1622288432450-277d0fef5ed6?w=600&q=85" alt="Shave">
+        </div>
+        <div class="gallery-masonry-item reveal" onclick="openLightbox(this)">
+          <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?w=600&q=85" alt="Tools">
+        </div>
+        <div class="gallery-masonry-item reveal" onclick="openLightbox(this)">
+          <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600&q=85" alt="Haircut">
+        </div>
+        <div class="gallery-masonry-item reveal" onclick="openLightbox(this)">
+          <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&q=85" alt="Beard work">
+        </div>
+        <div class="gallery-masonry-item reveal" onclick="openLightbox(this)">
+          <img src="https://images.unsplash.com/photo-1546033638-9e65dce1d5ed?w=600&q=85" alt="Barbershop">
+        </div>
+        <div class="gallery-masonry-item reveal" onclick="openLightbox(this)">
+          <img src="https://images.unsplash.com/photo-1591702080074-b9d5e7bf03e1?w=600&q=85" alt="Fade">
+        </div>
+        <div class="gallery-masonry-item reveal" onclick="openLightbox(this)">
+          <img src="https://images.unsplash.com/photo-1595152452543-e5fc22cbe776?w=600&q=85" alt="Barber tools">
+        </div>
+        <div class="gallery-masonry-item reveal" onclick="openLightbox(this)">
+          <img src="https://images.unsplash.com/photo-1567894340315-735d7c361db0?w=600&q=85" alt="Style">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+    <img id="lightboxImg" src="" alt="Gallery image">
+  </div>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <span class="eyebrow" data-en="Like What You See?" data-gr="Σου Αρέσει;">Like What You See?</span>
+      <h2 data-en="Book Your Transformation" data-gr="Κλείστε την Μεταμόρφωσή σας">Book Your Transformation</h2>
+      <p data-en="Every result starts with a booking. Yours is one click away." data-gr="Κάθε αποτέλεσμα ξεκινά με μια κράτηση. Η δική σας είναι ένα κλικ μακριά.">Every result starts with a booking. Yours is one click away.</p>
+      <div class="cta-actions">
+        <a href="barber-booking.html" class="btn btn-primary"><span data-en="Book Now" data-gr="Κλείστε Τώρα">Book Now</span> <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-main">BarberHaus</span>
+            <span class="logo-sub" data-en="Premium Grooming" data-gr="Ανδρική Περιποίηση">Premium Grooming</span>
+          </div>
+          <p data-en="Precision cuts, classic shaves, and timeless style in the heart of Athens since 2008." data-gr="Ακριβής κουρέματα, κλασικό ξύρισμα από το 2008.">Precision cuts, classic shaves, and timeless style in the heart of Athens since 2008.</p>
+          <div class="footer-socials">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 data-en="Navigation" data-gr="Πλοήγηση">Navigation</h4>
+          <ul>
+            <li><a href="index.html" data-en="Home" data-gr="Αρχική">Home</a></li>
+            <li><a href="barber-services.html" data-en="Services" data-gr="Υπηρεσίες">Services</a></li>
+            <li><a href="barber-gallery.html" data-en="Gallery" data-gr="Γκαλερί">Gallery</a></li>
+            <li><a href="barber-about.html" data-en="About" data-gr="Σχετικά">About</a></li>
+            <li><a href="barber-booking.html" data-en="Book Now" data-gr="Κράτηση">Book Now</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-en="Hours" data-gr="Ωράριο">Hours</h4>
+          <ul>
+            <li><a href="#" data-en="Mon–Fri: 9–21" data-gr="Δευ–Παρ: 9–21">Mon–Fri: 9–21</a></li>
+            <li><a href="#" data-en="Sat: 10–18" data-gr="Σαβ: 10–18">Sat: 10–18</a></li>
+            <li><a href="#" data-en="Sunday: Closed" data-gr="Κυριακή: Κλειστά">Sunday: Closed</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-en="Contact" data-gr="Επικοινωνία">Contact</h4>
+          <ul>
+            <li><a href="#">Ermou 45, Athens</a></li>
+            <li><a href="tel:+302101234567">+30 210 123 4567</a></li>
+            <li><a href="mailto:hello@barberhaus.gr">hello@barberhaus.gr</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-en="© 2024 BarberHaus Athens. All rights reserved." data-gr="© 2024 BarberHaus Athens. Με επιφύλαξη παντός δικαιώματος.">© 2024 BarberHaus Athens. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="barber-script.js"></script>
+  <script>
+    function openLightbox(el) {
+      const img = el.querySelector('img');
+      document.getElementById('lightboxImg').src = img.src;
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+    document.getElementById('lightboxImg').addEventListener('click', e => e.stopPropagation());
+  </script>
+</body>
+</html>
